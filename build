@@ -107,7 +107,7 @@ fi
   echo "====================="
   echo
 
-  hardware=`fgrep Hardware /proc/cpuinfo | head -1 | awk '{ print $3 }'`
+  hardware="BCM2709"
 
 #  if [ x$hardware != "xBCM2708" ]; then
 #    echo ""

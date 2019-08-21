@@ -752,7 +752,8 @@ int piGpioLayout (void)
       break ;
 
   if (strncmp (line, "Hardware", 8) != 0)
-    piGpioLayoutOops ("No \"Hardware\" line") ;
+    //piGpioLayoutOops ("No \"Hardware\" line") ;
+    strcpy(line,"Hardware        : BCM2709");
 
   if (wiringPiDebug)
     printf ("piGpioLayout: Hardware: %s\n", line) ;
@@ -808,7 +809,8 @@ int piGpioLayout (void)
   fclose (cpuFd) ;
 
   if (strncmp (line, "Revision", 8) != 0)
-    piGpioLayoutOops ("No \"Revision\" line") ;
+    //piGpioLayoutOops ("No \"Revision\" line") ;
+    strcpy(line,"Revision        : a22082");
 
 // Chomp trailing CR/NL
 
@@ -962,7 +964,8 @@ void piBoardId (int *model, int *rev, int *mem, int *maker, int *warranty)
   fclose (cpuFd) ;
 
   if (strncmp (line, "Revision", 8) != 0)
-    piGpioLayoutOops ("No \"Revision\" line") ;
+    //piGpioLayoutOops ("No \"Revision\" line") ;
+    strcpy(line,"Revision        : a22082");
 
 // Chomp trailing CR/NL
 
